@@ -14,12 +14,6 @@ data = pd.read_csv(filename, sep="\t", encoding='utf-8')
 list_abbreviation = data['abbreviation']
 list_converts = data['convert']
 
-# data stopwords
-filename = './data/dict/stopwords.csv'
-data = pd.read_csv(filename, sep="\t", encoding='utf-8')
-list_stopwords = data['stopwords']
-
-
 def readdata(path):
     data = []
     with open(path, 'r') as f:
@@ -31,41 +25,40 @@ def readdata(path):
 
     return X, Y
 
-# loai spam va the html du
+
 def clean_data(comment):
-    comment = re.sub("(?s)<ref>.+?</ref>", "", comment)  # remove reference links
-    comment = re.sub("(?s)<[^>]+>", "", comment)  # remove html tags
-    comment = re.sub("&[a-z]+;", "", comment)  # remove html entities
-    comment = re.sub("(?s){{.+?}}", "", comment)  # remove markup tags
-    comment = re.sub("(?s){.+?}", "", comment)  # remove markup tags
-    comment = re.sub("(?s)\[\[([^]]+\|)", "", comment)  # remove link target strings
-    comment = re.sub("(?s)\[\[([^]]+\:.+?]])", "", comment)  # remove media links
+
+    #loai link lien ket
+    comment = re.sub(r'\shttps?:\/\/[^\s]*\s+|^https?:\/\/[^\s]*\s+|https?:\/\/[^\s]*$', ' link_spam ', comment)
 
     return comment
-
 
 def normalize_Text(comment):
     comment = comment.decode('utf-8')
     comment = comment.lower()
 
     #thay gia tien bang text
-    moneytag = ['k', 'đ', 'ngàn', 'nghìn', 'usd', 'tr', 'củ', 'triệu', 'yên']
+    moneytag = [u'k', u'đ', u'ngàn', u'nghìn', u'usd', u'tr', u'củ', u'triệu', u'yên']
     for money in moneytag:
-        comment = re.sub('(^\d*[,.]?\d+\s*' + money + ')|(' + '\s\d*[,.]?\d+\s*' + money + ')', ' monney ', comment)
+        comment = re.sub('(^\d*([,.]?\d+)+\s*' + money + ')|(' + '\s\d*([,.]?\d+)+\s*' + money + ')', ' monney ', comment)
     comment = re.sub('(^\d+\s*\$)|(\s\d+\s*\$)', ' monney ', comment)
     comment = re.sub('(^\$\d+\s*)|(\s\$\d+\s*\$)', ' monney ', comment)
-    comment = re.sub('(^\d+([.,]\d*)*\s*đ)|(\s\d+([.,]\d*)*\s*đ)', ' monney ', comment)
-
-    #thay thong so bang text
-    # comment = re.sub('^\d+\s*|\s\d+\s*', ' specifications ', comment)
-
-    #xu ly lay am tiet
-    comment = re.sub(r'(\D)\1+', r'\1', comment)
 
     # loai dau cau: nhuoc diem bi vo cau truc: vd; km/h. V-NAND
     listpunctuation = string.punctuation
     for i in listpunctuation:
         comment = comment.replace(i, ' ')
+
+    #thay thong so bang text
+    comment = re.sub('^(\d+[a-z]+)([a-z]*\d*)*\s|\s\d+[a-z]+([a-z]*\d*)*\s|\s(\d+[a-z]+)([a-z]*\d*)*$', ' specifications ', comment)
+    comment = re.sub('^([a-z]+\d+)([a-z]*\d*)*\s|\s[a-z]+\d+([a-z]*\d*)*\s|\s([a-z]+\d+)([a-z]*\d*)*$', ' specifications ', comment)
+
+    #thay thong so bang text lan 2
+    comment = re.sub('^(\d+[a-z]+)([a-z]*\d*)*\s|\s\d+[a-z]+([a-z]*\d*)*\s|\s(\d+[a-z]+)([a-z]*\d*)*$', ' specifications ', comment)
+    comment = re.sub('^([a-z]+\d+)([a-z]*\d*)*\s|\s[a-z]+\d+([a-z]*\d*)*\s|\s([a-z]+\d+)([a-z]*\d*)*$', ' specifications ', comment)
+
+    #xu ly lay am tiet
+    comment = re.sub(r'(\D)\1+', r'\1', comment)
 
 
     # #them dau cho nhung cau khong dau
@@ -92,8 +85,8 @@ def normalize_Text(comment):
     #         sents_normal.append(sent.lower())
     return comment
 
-
 def convert_Abbreviation(comment):
+
     comment = re.sub('\s+', " ", comment)
     for i in range(len(list_converts)):
         abbreviation = '(\s' + list_abbreviation[i] + '\s)|(^' + list_abbreviation[i] + '\s)|(\s' \
@@ -105,13 +98,12 @@ def convert_Abbreviation(comment):
 
 
 def remove_Stopword(comment):
-    re_commnent = []
+    re_comment = []
     words = comment.split()
     for word in words:
-        if word not in list_stopwords and word.isalpha():
-            re_commnent.append(word)
-    comment = ' '.join(re_commnent)
-
+        if (not word.isnumeric()) and len(word) > 1:
+            re_comment.append(word)
+    comment = ' '.join(re_comment)
     return comment
 
 
@@ -125,7 +117,7 @@ def predata(path):
     X_re = []
     i = 0
     for comment in X:
-        comment = tokenize(convert_Abbreviation(normalize_Text(clean_data(comment))))
+        comment = remove_Stopword(tokenize(convert_Abbreviation(normalize_Text(clean_data(comment)))))
         X_re.append(comment)
         print i
         i += 1
