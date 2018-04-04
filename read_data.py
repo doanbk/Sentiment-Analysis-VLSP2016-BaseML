@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 
 import re
-from ctypes import c_bool
+import string
 
 import pandas as pd
 from pyvi.pyvi import ViTokenizer
-import string
-from vnaccent import accent
 
 # data dict_abbreviation
 filename = './data/dict/dict_abbreviation.csv'
 data = pd.read_csv(filename, sep="\t", encoding='utf-8')
 list_abbreviation = data['abbreviation']
 list_converts = data['convert']
+
 
 def readdata(path):
     data = []
@@ -27,20 +26,21 @@ def readdata(path):
 
 
 def clean_data(comment):
-
-    #loai link lien ket
+    # loai link lien ket
     comment = re.sub(r'\shttps?:\/\/[^\s]*\s+|^https?:\/\/[^\s]*\s+|https?:\/\/[^\s]*$', ' link_spam ', comment)
 
     return comment
+
 
 def normalize_Text(comment):
     comment = comment.decode('utf-8')
     comment = comment.lower()
 
-    #thay gia tien bang text
+    # thay gia tien bang text
     moneytag = [u'k', u'đ', u'ngàn', u'nghìn', u'usd', u'tr', u'củ', u'triệu', u'yên']
     for money in moneytag:
-        comment = re.sub('(^\d*([,.]?\d+)+\s*' + money + ')|(' + '\s\d*([,.]?\d+)+\s*' + money + ')', ' monney ', comment)
+        comment = re.sub('(^\d*([,.]?\d+)+\s*' + money + ')|(' + '\s\d*([,.]?\d+)+\s*' + money + ')', ' monney ',
+                         comment)
     comment = re.sub('(^\d+\s*\$)|(\s\d+\s*\$)', ' monney ', comment)
     comment = re.sub('(^\$\d+\s*)|(\s\$\d+\s*\$)', ' monney ', comment)
 
@@ -49,17 +49,16 @@ def normalize_Text(comment):
     for i in listpunctuation:
         comment = comment.replace(i, ' ')
 
-    #thay thong so bang text
-    comment = re.sub('^(\d+[a-z]+)([a-z]*\d*)*\s|\s\d+[a-z]+([a-z]*\d*)*\s|\s(\d+[a-z]+)([a-z]*\d*)*$', ' specifications ', comment)
-    comment = re.sub('^([a-z]+\d+)([a-z]*\d*)*\s|\s[a-z]+\d+([a-z]*\d*)*\s|\s([a-z]+\d+)([a-z]*\d*)*$', ' specifications ', comment)
+    # thay thong so bang specifications
+    comment = re.sub('^(\d+[a-z]+)([a-z]*\d*)*\s|\s\d+[a-z]+([a-z]*\d*)*\s|\s(\d+[a-z]+)([a-z]*\d*)*$', ' ', comment)
+    comment = re.sub('^([a-z]+\d+)([a-z]*\d*)*\s|\s[a-z]+\d+([a-z]*\d*)*\s|\s([a-z]+\d+)([a-z]*\d*)*$', ' ', comment)
 
-    #thay thong so bang text lan 2
-    comment = re.sub('^(\d+[a-z]+)([a-z]*\d*)*\s|\s\d+[a-z]+([a-z]*\d*)*\s|\s(\d+[a-z]+)([a-z]*\d*)*$', ' specifications ', comment)
-    comment = re.sub('^([a-z]+\d+)([a-z]*\d*)*\s|\s[a-z]+\d+([a-z]*\d*)*\s|\s([a-z]+\d+)([a-z]*\d*)*$', ' specifications ', comment)
+    # thay thong so bang text lan 2
+    comment = re.sub('^(\d+[a-z]+)([a-z]*\d*)*\s|\s\d+[a-z]+([a-z]*\d*)*\s|\s(\d+[a-z]+)([a-z]*\d*)*$', ' ', comment)
+    comment = re.sub('^([a-z]+\d+)([a-z]*\d*)*\s|\s[a-z]+\d+([a-z]*\d*)*\s|\s([a-z]+\d+)([a-z]*\d*)*$', ' ', comment)
 
-    #xu ly lay am tiet
+    # xu ly lay am tiet
     comment = re.sub(r'(\D)\1+', r'\1', comment)
-
 
     # #them dau cho nhung cau khong dau
     # words = comment.split()
@@ -85,8 +84,8 @@ def normalize_Text(comment):
     #         sents_normal.append(sent.lower())
     return comment
 
-def convert_Abbreviation(comment):
 
+def convert_Abbreviation(comment):
     comment = re.sub('\s+', " ", comment)
     for i in range(len(list_converts)):
         abbreviation = '(\s' + list_abbreviation[i] + '\s)|(^' + list_abbreviation[i] + '\s)|(\s' \

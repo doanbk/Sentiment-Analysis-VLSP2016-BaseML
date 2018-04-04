@@ -14,7 +14,7 @@ def linear_SVM(c):
 
     return score
 # print linear_SVM() #68%
-# print 'linear_SVM: ',linear_SVM(0.9) #67%
+# print 'linear_SVM: ',linear_SVM(0.9) #67.8%
 
 # SVM
 def svm():
@@ -32,7 +32,6 @@ def nearest_Neighbors(n):
     clf = KNeighborsClassifier(n)
     clf.fit(X_train, y_train)
     score = clf.score(X_test, y_test)
-
     return score
 # print nearest_Neighbors(9) #62%
 
@@ -46,7 +45,7 @@ def decision_Tree(n):
 
     return score
 
-# print decision_Tree(31) #52%
+print decision_Tree(31) #52%
 
 # print 'decision_Tree: ',decision_Tree(20) #52%
 # print 'decision_Tree: ',decision_Tree(25) #52%
@@ -73,7 +72,7 @@ def neural_Net(alpha):
 
     return score
 
-print neural_Net(1) #69% #layer: default
+# print 'neural_Net: ',neural_Net(1) #69% #layer: default
 
 # Naive Bayes
 def naive_Bayes():
@@ -89,7 +88,7 @@ def naive_Bayes():
 
 def logictic(c):
     from sklearn.linear_model import LogisticRegression
-    clf = LogisticRegression(C = c)
+    clf = LogisticRegression(penalty='l2', max_iter=100, C=c)
     clf.fit(X_train, y_train)
     score = clf.score(X_test, y_test)
     return score
@@ -97,4 +96,4 @@ def logictic(c):
 # print logictic() #63
 
 # print 'logictic: ',logictic(0.5) #67
-# print 'logictic: ',logictic(0.7) #67
+# print 'logictic: ',logictic(0.7) #68

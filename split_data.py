@@ -25,16 +25,16 @@ train3, test3 = train_test_split(data_pos, test_size=340)
 
 with open('./data/train/train.txt', 'w') as f:
     for text in train1:
-        f.write('0: '+text + '\n')
+        f.write('0: ' + text + '\n')
     for text in train2:
-        f.write('1: '+text + '\n')
+        f.write('1: ' + text + '\n')
     for text in train3:
-        f.write('2: '+text + '\n')
+        f.write('2: ' + text + '\n')
 
 with open('./data/test/test.txt', 'w') as f:
     for text in test1:
-        f.write('0: '+text + '\n')
+        f.write('0: ' + text + '\n')
     for text in test2:
-        f.write('1: '+text + '\n')
+        f.write('1: ' + text + '\n')
     for text in test3:
-        f.write('2: '+text + '\n')
+        f.write('2: ' + text + '\n')

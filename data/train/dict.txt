@@ -53,7 +53,6 @@ ch_thân
 bế_tắc
 hamam
 nhớ_đời
-nghiêm_s
 mỏi
 music
 plus_thế
@@ -180,7 +179,7 @@ vớ
 tức
 ngập_tràn
 phủ
-phụ
+s_card
 ổn
 ổi
 kia_mà
@@ -322,6 +321,7 @@ tin_tưởng
 đam_mê
 iresearch
 tôm
+con_em
 như_androi
 xâm_nhập
 kilburn
@@ -351,7 +351,6 @@ xem_lại
 fanryu
 tăng_giá
 flash_kép
-specifications_thi
 thiển_cận
 chọt
 trong
@@ -395,6 +394,7 @@ trở
 chẳng
 tiền_triệu
 trừ
+trợ
 trụ
 phác_thảo
 điều_hành
@@ -771,6 +771,7 @@ phích
 thế_kỷ
 cạn
 ngưỡng_mộ
+sài_thấy
 nhỏva
 chan
 kì_diệu_đô
@@ -804,7 +805,7 @@ hxv
 nhân_tiện
 đứt
 iphone_chánh
-kỉ_lục
+pin_thegioididong
 dùm
 duy_trì
 tracking
@@ -1123,7 +1124,6 @@ bóc_tem
 sài_dc
 getaway
 vocal
-hổ_trợ
 triệu
 tắt_thở
 khập_khiễng
@@ -1138,7 +1138,7 @@ dự_án
 play
 thoải_mái
 virus
-virut
+phụ
 xu_ly
 exe
 nhân
@@ -1181,6 +1181,7 @@ cơ_may
 lên_đường
 singapor
 chính_sách
+sài_edge
 trọn
 thánh_fans
 set
@@ -1223,7 +1224,6 @@ trí
 forza
 mlc
 cam_đoan
-anyhow
 notẹ
 giông_giống
 vol
@@ -1267,7 +1267,7 @@ cấp
 wearable
 windforce
 riếc
-specifications_thegioididong
+rỗi
 uớc
 riết
 juxt
@@ -1392,6 +1392,7 @@ lên
 quái_vật
 iphone_s
 nắng_nóng
+tuổi
 thử_hỏi
 đẹp_mặt
 quảng
@@ -1517,6 +1518,7 @@ phan_cuồng
 tiet
 ném_đá
 ám_ảnh
+mạng_v
 tái_phát_minh
 chú_trọng
 note_trừ
@@ -1631,7 +1633,7 @@ gấu_bản
 đột_ngột
 device
 khóc_than
-sinh_viên
+đợi_vậy
 vào
 vài
 phạm_vi
@@ -1669,7 +1671,6 @@ chuong
 vũ
 frame
 mất_giá
-specifications_d
 đánh_bại
 mà_ngộ
 sinh_tồn
@@ -1895,6 +1896,7 @@ lắp
 smarphone
 sài_qua
 trên_cơ
+hỗ_trợ_giá
 ăn_cắp
 cảm_giác
 thừa_vậy
@@ -2006,6 +2008,7 @@ hờ
 hồ
 hố
 cổng
+hổ
 ngắn_hạn
 hỉ
 đoạn
@@ -2154,6 +2157,7 @@ cảnh_sát
 kém
 du
 dr
+tiếp_vậy
 emc
 chống
 nhòm_ngó
@@ -2212,6 +2216,7 @@ lựa
 bộ_máy
 máy_ảnh
 thua_kém
+xóa_cỡ
 smartwatch
 you
 so_đo
@@ -2333,8 +2338,8 @@ truc
 kiển
 true
 reset
-ời
 mtp
+sinh_viên
 xấp_xỉ
 kiếng
 thà_ít
@@ -2383,8 +2388,10 @@ cuda
 rởm
 phơi
 flast
+năm_hạ
 lo_lắng
 giga
+thua_xiaomi
 xpro
 tàn_lụi
 vọng
@@ -2526,7 +2533,6 @@ tải
 lôi
 card
 reciver
-specifications_đây
 disable
 tuong
 kinh_hoàng
@@ -2902,7 +2908,7 @@ finfet
 khay
 kỷ_niệm
 bầu_bầu
-đọ
+ời
 đỏ
 giống
 cà
@@ -2981,6 +2987,7 @@ starbucks
 trưởng
 mở_ty_tỷ
 tiếp_theo
+như_iphone
 ý_tưởng
 die
 heavy
@@ -3009,7 +3016,6 @@ buterfly
 cắt_giảm
 bệt
 sđt
-p_specifications
 khắc_phục
 đâm
 php
@@ -3720,7 +3726,6 @@ lưu_ý
 universal
 công_nhân_viên
 beats
-sài_specifications
 seting
 tích_cóp
 hoăc
@@ -4042,6 +4047,7 @@ is
 nưa
 it
 canh
+p_pin
 ik
 stainles_stel
 im
@@ -4150,6 +4156,7 @@ liện
 liệt
 liệu
 dạng_vân
+tản_windforce
 chỉ_đỏ
 chỉ
 chị
@@ -4398,7 +4405,6 @@ thâm
 mê
 hãnh_diện
 dị_thường
-nam_s
 nóng
 hotspot
 giá_thành
@@ -4500,7 +4506,7 @@ kệ
 qsd
 đính_chính
 tin_đồn
-áp_chót
+bmw
 loi_j
 ve_dung
 sound
@@ -4558,6 +4564,7 @@ mon
 từ_thông_số
 mod
 tập_luyện
+firmware_cuahangtcs
 lightning
 hay_ho
 suger
@@ -4589,7 +4596,7 @@ gọn_nhẹ
 khởi_động
 thành_quả
 aniversary
-màn_vi_tính
+bik
 nắm
 từng
 hoa_lá_cành
@@ -4651,7 +4658,7 @@ tiện_dụng
 deluxe
 starting
 màu_mè
-bmw
+áp_chót
 gia_money
 phút
 kỉ_niệm
@@ -4683,7 +4690,6 @@ gọi_là
 zô
 giao_diện
 chắc_thánh
-sài_em
 ưu_điểm
 thương_hiệu_thế_giới
 ùi
@@ -4793,12 +4799,12 @@ box_anandtech
 yếu
 công_tâm
 giá_như_vậy
+kỉ_lục
 sytem
 huyền_ảo
 tiến_hoá
 cấu_tạo
 radeon
-như_specifications
 hệ_thống
 dont
 bản_lề
@@ -4925,8 +4931,6 @@ nghiep
 nghiem
 nhì
 trung_niên
-iphone_specifications
-công_nghệ_specifications
 đối_thủ_tiêu_diệt
 siêu_mạnh
 khuyến_mại
@@ -4953,6 +4957,7 @@ tương_thích
 kinh_thế
 gach
 laban
+ray
 genk
 winpro
 đánh_bóng
@@ -4992,7 +4997,7 @@ computerworld
 cui
 chọn
 tinh_tế
-bik
+mà_đọ
 hữu_ích
 big
 đứt_quãng
@@ -5070,7 +5075,6 @@ ghép
 hạt_dẻ_thế
 hên
 tối_giản
-specifications_vậy
 làm_tiền
 mỉu
 thông_qua
@@ -5162,7 +5166,6 @@ tàn
 tài
 chót
 trình_diễn
-mà_specifications
 nhung
 twiter
 chói
@@ -5187,12 +5190,12 @@ chú
 vòng_tay
 kép
 thời_đại
-specifications
 góp_ý
 ầy
 chơi_vậy
 két
 binh
+màn_vi_tính
 gigabyte
 ultrasharp
 chiec
@@ -5460,7 +5463,7 @@ tomb
 căng
 coi_thường
 thành_viên
-com_specifications
+zenfone
 trăm
 súng
 tay_chân
@@ -5527,7 +5530,6 @@ bài
 bản_đồ
 bào
 bàn
-specifications_cuahangtcs
 rise
 đẩy_lùi
 inche
@@ -5559,7 +5561,7 @@ công_nghệ_pin
 thích_ứng
 có_khi
 độc_giả
-nhu_specifications
+anyhow
 song_song
 tiệm
 tiện
@@ -5722,7 +5724,7 @@ raw
 rat
 sáng_mai
 điểu
-ray
+ram_trừ
 suýt
 firmware
 sạc_cơ
@@ -5730,6 +5732,7 @@ makaple
 cảm_ơn
 mét_dây
 ngân_sách
+máy_ram
 thời_tiết
 ai_ai
 ngoẳng
@@ -5782,7 +5785,6 @@ tất_nhiên
 mướt_lắm
 nut
 gốc
-specifications_trừ
 đê_tiện
 bao_lâu_đây
 savijsc
@@ -6178,6 +6180,7 @@ khủng_long
 xuất_xắc
 rình
 huydolar
+nghiêm
 lau_vat
 vọc_vạch
 kinh_điển
@@ -6250,6 +6253,7 @@ chẳng_là
 engine
 ảo
 ản
+asus_đây
 hiệu_quả
 tiger
 chân_thành
@@ -6319,7 +6323,7 @@ yêu_aple
 conect
 hầm_hố
 đồng_thời
-tuổi
+tùy_biến
 xinh
 hình_thành
 tiền
@@ -6375,6 +6379,7 @@ vỉa_hè
 hoăvj
 vị_trí
 trẽo
+ram_thi
 bối_cảnh
 tẹt
 acer
@@ -6481,6 +6486,7 @@ giây_vậy
 goal
 gì_vậy
 sài_laptop
+ma_thieu
 ôm
 ôi
 ôg
@@ -6674,7 +6680,6 @@ mướn
 không_khéo
 vội_vàng
 thiên
-rỗi
 chỉ_số
 đồ_đạc
 găp
@@ -6722,6 +6727,7 @@ softbank
 giờ_đây
 ve_cái
 võng_mạc
+com_kém
 chấp_nhận
 chắc_chắn
 có_dễ
@@ -6746,6 +6752,7 @@ hoành
 inspiron
 mượn
 truyền_thông
+virut
 vĩ_đại
 corsair
 bezel
@@ -6768,7 +6775,6 @@ mỗingười
 kể_ra
 hàng
 châu
-tùy_biến
 đợi
 hành
 toét
@@ -6994,7 +7000,6 @@ thùng
 tưởng_nhớ
 âm_nhạc
 giục
-mạng_specifications
 lí_tưởng
 trọn_vẹn
 tồn_kho
@@ -7041,6 +7046,7 @@ nam_thế
 vốn
 trông
 sức_mua
+bo_vi
 nguời
 yêu_iphone
 giường
@@ -7138,7 +7144,6 @@ trực_tiếp
 nguong
 phan_ryu
 thụy_sĩ
-s_specifications
 toả
 breaker
 tò_mò
@@ -7167,7 +7172,6 @@ tín_hiệu
 tái_tái
 miban
 fansam
-zenfone
 kính_trọng_s
 hosts
 chính

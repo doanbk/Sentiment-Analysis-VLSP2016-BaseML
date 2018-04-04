@@ -325,8 +325,10 @@ tất_cả
 băng_keo
 viec
 vết
+nhôm
 thọt
 baracuda
+đổi_đây
 trên
 inox
 thấm
@@ -466,7 +468,6 @@ dom
 doc
 phanteks
 quốc_đây
-specifications_vậy
 kín_tiếng
 fuhlen
 vừa_rồi
@@ -560,6 +561,7 @@ chủ_yếu
 chanh_chua
 xét
 prada
+sh_mầu
 mà_bác
 trung_thành_thế
 an_toàn
@@ -1202,7 +1204,6 @@ phân_giải
 diễn
 có_điều
 chung_quy
-mống
 móc
 vận_tốc
 móa
@@ -1227,7 +1228,7 @@ cân_đối
 unpair
 tự_hào
 mà_lại
-specifications_đây
+mống
 yên
 lên_tiếng
 trước_hết
@@ -1240,7 +1241,6 @@ lởi
 toàn
 tương_đương
 toài
-specifications_v
 chuẩn
 xa
 hết_ý
@@ -1387,6 +1387,7 @@ cũng_nên
 nhật_chất
 giớimong
 tương_đối
+amd_vậy
 dòng
 đồng_đều
 chặn
@@ -1573,6 +1574,7 @@ bàn_thờ
 giới
 ck
 alienware
+xiaomi_kích
 money
 nhược_điểm
 ám
@@ -1781,7 +1783,6 @@ iểm
 dải_kim_loại
 màu_sắc
 mong_đợi
-mua_specifications
 quet
 xuất_sắc
 tiger
@@ -2112,7 +2113,6 @@ yếu
 dung
 yếu_xìu
 pub
-sh
 khuyên
 chúc_mừng
 lê_hồng
@@ -2258,7 +2258,7 @@ công_ty
 microusb
 năng_lượng
 ì_ạch
-nhôm
+con_cái
 bphone
 hix
 bộ_nhớ
@@ -2277,7 +2277,6 @@ tmobile
 hơn
 ến
 trước_kia
-specifications_kích
 chính_sách
 dưới
 chuột
@@ -2482,7 +2481,6 @@ bảng
 khôn
 sắc_bén
 viền
-p_specifications
 sách
 chấp_nhận
 chắc_chắn
@@ -2612,6 +2610,7 @@ chat
 chau
 hên
 ưng
+sài_phai
 lớn
 tone
 tiêu_hao
@@ -2654,7 +2653,6 @@ gt
 dịp
 làm_chủ
 rủi_ro
-specifications_mầu
 bây_giờ
 nam_giới
 steve
@@ -2861,7 +2859,6 @@ tự_tin
 khâu
 de
 thời_đại
-specifications
 như_thường
 giảm
 bá_đạo
@@ -3223,6 +3220,7 @@ sang_trọng
 cv
 cu
 thiết_bị
+dc_v
 cân_nhắc
 tỉ_mỉ
 nhằm
@@ -3515,7 +3513,6 @@ universal
 hộp
 đốt
 inh
-sài_specifications
 vostro
 fitbit
 nhận_biết
