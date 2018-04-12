@@ -12,8 +12,6 @@ def Bow(path_train, path_test):
     X_train = vectorizer.fit_transform(corpus_train).toarray()
     X_test = vectorizer.transform(corpus_test).toarray()
 
-    # bigram_vectorizer = CountVectorizer(ngram_range=(1, 2),token_pattern = r'\b\w+\b', min_df = 1)
-    # X_2 = bigram_vectorizer.fit_transform(corpus).toarray()
     return X_train, Y_train, X_test, Y_test
 
 

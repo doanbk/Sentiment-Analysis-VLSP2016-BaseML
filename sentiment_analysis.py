@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import vectorize_data as vd
 
 X_train, y_train, X_test, y_test = vd.tf_Idf('./data/train/pre_train.txt','./data/test/pre_test.txt')
@@ -13,17 +14,7 @@ def linear_SVM(c):
     score = clf.score(X_test, y_test)
 
     return score
-# print linear_SVM() #68%
 # print 'linear_SVM: ',linear_SVM(0.9) #67.8%
-
-# SVM
-def svm():
-    from sklearn.svm import SVC
-    clf = SVC(gamma=2, C=1)
-    clf.fit(X_train, y_train)
-    score = clf.score(X_test, y_test)
-
-    return score
 
 # Nearest Neighbors
 def nearest_Neighbors(n):
@@ -45,10 +36,7 @@ def decision_Tree(n):
 
     return score
 
-print decision_Tree(31) #52%
-
-# print 'decision_Tree: ',decision_Tree(20) #52%
-# print 'decision_Tree: ',decision_Tree(25) #52%
+# print decision_Tree(31) #52%
 
 # Random Forest
 def random_Forest(depth = 10, estimator = 20):
@@ -58,8 +46,6 @@ def random_Forest(depth = 10, estimator = 20):
     score = clf.score(X_test, y_test)
 
     return score
-# print random_Forest(depth=30) #57%
-# print 'random_Forest: ',random_Forest(depth=30) #57%
 # print 'random_Forest: ',random_Forest(depth=35) #57%
 
 
@@ -71,7 +57,6 @@ def neural_Net(alpha):
     score = clf.score(X_test, y_test)
 
     return score
-
 # print 'neural_Net: ',neural_Net(1) #69% #layer: default
 
 # Naive Bayes
@@ -82,10 +67,9 @@ def naive_Bayes():
     score = clf.score(X_test, y_test)
 
     return score
+# print 'naive_Bayes: ',naive_Bayes() #53%
 
-# print naive_Bayes() #49%
-# print 'naive_Bayes: ',naive_Bayes() #49%
-
+#Maxent
 def logictic(c):
     from sklearn.linear_model import LogisticRegression
     clf = LogisticRegression(penalty='l2', max_iter=100, C=c)
@@ -93,7 +77,4 @@ def logictic(c):
     score = clf.score(X_test, y_test)
     return score
 
-# print logictic() #63
-
-# print 'logictic: ',logictic(0.5) #67
 # print 'logictic: ',logictic(0.7) #68
