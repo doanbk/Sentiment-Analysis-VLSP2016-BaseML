@@ -3,6 +3,7 @@
 import vectorize_data as vd
 
 X_train, y_train, X_test, y_test = vd.tf_Idf('./data/train/pre_train.txt', './data/test/pre_test.txt')
+# X_train, y_train, X_test, y_test = vd.Bow('./data/train/pre_train.txt', './data/test/pre_test.txt')
 
 
 # Maxent
@@ -20,10 +21,10 @@ def logictic():
     score = clf.score(X_test, y_test)
 
     return best_score, best_param, score
-# logictic:  (0.67009803921568623, {'penalty': 'l2', 'C': 10, 'max_iter': 100}, 0.69411764705882351)
+# print 'logictic: ', logictic()
+# tfidf: logictic:  (0.67009803921568623, {'penalty': 'l2', 'C': 10, 'max_iter': 100}, 0.69411764705882351)
+# Bow: logictic:  (0.66004901960784312, {'penalty': 'l2', 'C': 10, 'max_iter': 100}, 0.68627450980392157)
 
-
-print 'logictic: ', logictic()
 
 
 # Nearest Neighbors
@@ -41,10 +42,10 @@ def nearest_Neighbors():
     best_param = clf.best_params_
     score = clf.score(X_test, y_test)
     return best_score, best_param, score
-# nearest_Neighbors:  (0.61078431372549025, {'n_neighbors': 9}, 0.61078431372549025)
 
-
-print 'nearest_Neighbors: ', nearest_Neighbors()
+# print 'nearest_Neighbors: ', nearest_Neighbors()
+# tfidf: nearest_Neighbors:  (0.61078431372549025, {'n_neighbors': 9}, 0.61078431372549025)
+# Bow: nearest_Neighbors:  (0.47647058823529409, {'n_neighbors': 3}, 0.51372549019607838)
 
 
 # Decision Tree
@@ -65,9 +66,9 @@ def decision_Tree():
     return best_score, best_param, score
 
 
-print 'decision_Tree: ', decision_Tree()
-# decision_Tree:  (0.51593137254901966, {'max_depth': 30}, 0.52549019607843139)
-
+# print 'decision_Tree: ', decision_Tree()
+# tfidf: decision_Tree:  (0.51593137254901966, {'max_depth': 30}, 0.52549019607843139)
+# Bow: decision_Tree:  (0.52941176470588236, {'max_depth': 20}, 0.53921568627450978)
 
 # scikit_learn: SVM
 def SVM():
@@ -76,9 +77,9 @@ def SVM():
     svc = SVC()
 
     param_grid = [
-        {'C': [1, 10, 100, 1000], 'degree': [2, 3, 4], 'kernel': ['poly']},
-        {'C': [1, 10, 100, 1000], 'kernel': ['linear']},
-        {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},
+        {'C': [0.1, 1, 10], 'kernel': ['linear']},
+        # {'C': [0.1, 1, 10], 'degree': [2, 3, 4], 'kernel': ['poly']},
+        # {'C': [0.1, 1, 10], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},
     ]
     clf = GridSearchCV(svc, param_grid, refit=True)
 
@@ -90,8 +91,8 @@ def SVM():
     return best_score, best_param, score
 
 
-print 'SVM: ', SVM()
-
+# print 'SVM: ', SVM()
+#tfidf:
 
 # Naive Bayes
 def naive_Bayes():
@@ -103,9 +104,9 @@ def naive_Bayes():
     return score
 
 
-print 'naive_Bayes: ', naive_Bayes()
-# print 'naive_Bayes: ',naive_Bayes() #53%
-
+# print 'naive_Bayes: ', naive_Bayes()
+# tfidf: naive_Bayes:  0.530392156863
+# Bow: naive_Bayes:  0.547058823529
 
 # Random Forest
 def random_Forest():
@@ -114,7 +115,7 @@ def random_Forest():
 
     rfc = RandomForestClassifier()
 
-    param_grid = {'max_depth': [5, 10], 'n_estimators': [5, 10, 20], 'max_features': [10, 20]}
+    param_grid = {'max_depth': [5, 10, 35], 'n_estimators': [5, 10, 20], 'max_features': [10, 20]}
     clf = GridSearchCV(rfc, param_grid, refit=True)
 
     clf.fit(X_train, y_train)
@@ -125,16 +126,17 @@ def random_Forest():
     return best_score, best_param, score
 
 
-print 'random_Forest: ', random_Forest()
-
+# print 'random_Forest: ', random_Forest()
+# tfidf: random_Forest:  (0.45196078431372549, {'max_features': 20, 'n_estimators': 20, 'max_depth': 35}, 0.4696078431372549)
+# Bow: random_Forest:  (0.44485294117647056, {'max_features': 20, 'n_estimators': 20, 'max_depth': 35}, 0.44509803921568625)
 
 # Neural Net
-def neural_Net(alpha):
+def neural_Net():
     from sklearn.neural_network import MLPClassifier
     from sklearn.model_selection import GridSearchCV
     mlp = MLPClassifier()
 
-    param_grid = {'alpha': [0.1, 1], 'hidden_layer_sizes': [100, 20]}
+    param_grid = {'alpha': [1, 0.1, 0.01], 'hidden_layer_sizes': [(20,), (100,), (100,20), (20,100)]}
     clf = GridSearchCV(mlp, param_grid, refit=True)
 
     clf.fit(X_train, y_train)
@@ -143,4 +145,5 @@ def neural_Net(alpha):
     score = clf.score(X_test, y_test)
 
     return best_score, best_param, score
-# print 'neural_Net: ',neural_Net(1) #69% #layer: default
+# print 'neural_Net: ',neural_Net() #69% #layer: default
+# tfidf:
