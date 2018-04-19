@@ -26,7 +26,7 @@ def neural_Net(alpha):
     clf.fit(X_train, y_train)
     score = clf.score(X_test, y_test)
 
-    # joblib.dump(clf, 'model.pkl')
+    joblib.dump(clf, 'model.pkl')
 
     return score
 # print 'neural_Net: ',neural_Net(1)
@@ -45,4 +45,4 @@ def logictic(c):
 
     return score
 
-# print 'logictic: ',logictic(10)
+print 'logictic: ',logictic(10)

@@ -12,8 +12,8 @@ def logictic():
     from sklearn.model_selection import GridSearchCV
     lr = LogisticRegression()
 
-    param_grid = {'penalty': ['l1', 'l2'], 'max_iter': [100], 'C': [1, 10, 50, 100]}
-    clf = GridSearchCV(lr, param_grid, refit=True)
+    param_grid = {'penalty': ['l1', 'l2'], 'max_iter': [100], 'C': [10]}
+    clf = GridSearchCV(lr, param_grid, refit=True, cv=10)
 
     clf.fit(X_train, y_train)
     best_score = clf.best_score_
@@ -21,7 +21,7 @@ def logictic():
     score = clf.score(X_test, y_test)
 
     return best_score, best_param, score
-# print 'logictic: ', logictic()
+print 'logictic: ', logictic()
 # tfidf: logictic:  (0.67009803921568623, {'penalty': 'l2', 'C': 10, 'max_iter': 100}, 0.69411764705882351)
 # Bow: logictic:  (0.66004901960784312, {'penalty': 'l2', 'C': 10, 'max_iter': 100}, 0.68627450980392157)
 
@@ -77,8 +77,8 @@ def SVM():
     svc = SVC()
 
     param_grid = [
-        {'C': [0.1, 1, 10], 'kernel': ['linear']},
-        # {'C': [0.1, 1, 10], 'degree': [2, 3, 4], 'kernel': ['poly']},
+        # {'C': [0.1, 1, 10], 'kernel': ['linear']},
+        {'C': [0.1, 1, 10], 'degree': [2, 3, 4], 'kernel': ['poly']},
         # {'C': [0.1, 1, 10], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},
     ]
     clf = GridSearchCV(svc, param_grid, refit=True)
@@ -92,7 +92,9 @@ def SVM():
 
 
 # print 'SVM: ', SVM()
-#tfidf:
+#tfidf: linear SVM:  (0.66249999999999998, {'kernel': 'linear', 'C': 10}, 0.68823529411764706)
+#tfidf: poly SVM: (0.6169117647058824, {'kernel': 'poly', 'C': 0.1, 'degree': 4}, 0.6441176470588236)
+#tfidf: rbf SVM:  (0.4257, {'kernel: 'rbf', 'C': 0.1, 'gama': 0.001}, 0.41
 
 # Naive Bayes
 def naive_Bayes():
@@ -136,7 +138,7 @@ def neural_Net():
     from sklearn.model_selection import GridSearchCV
     mlp = MLPClassifier()
 
-    param_grid = {'alpha': [1, 0.1, 0.01], 'hidden_layer_sizes': [(20,), (100,), (100,20), (20,100)]}
+    param_grid = {'alpha': [1, 0.1, 0.01], 'hidden_layer_sizes': [(100,)]}
     clf = GridSearchCV(mlp, param_grid, refit=True)
 
     clf.fit(X_train, y_train)
@@ -146,4 +148,5 @@ def neural_Net():
 
     return best_score, best_param, score
 # print 'neural_Net: ',neural_Net() #69% #layer: default
-# tfidf:
+# tfidf: neural_Net:  (0.6693627450980392, {'alpha': 0.01, 'hidden_layer_sizes': (22,)}, 0.6872549019607843)
+# tfidf: neural_Net:  (0.6686274509803921, {'alpha': 0.1, 'hidden_layer_sizes': (100, 20)}, 0.6882352941176471)

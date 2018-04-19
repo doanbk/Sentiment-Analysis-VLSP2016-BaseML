@@ -28,4 +28,4 @@ def tf_Idf(path_train, path_test):
     joblib.dump(vectorizer, 'vectorembedding.pkl')
     return X_train, Y_train, X_test, Y_test
 
-X_train, y_train, X_test, y_test = tf_Idf('./data/train/pre_train.txt','./data/test/pre_test.txt')
+# X_train, y_train, X_test, y_test = tf_Idf('./data/train/pre_train.txt','./data/test/pre_test.txt')
